@@ -4,6 +4,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * Create 13/09/2016
+ * @author urbain
+ *
+ * by command line, execute : java Client User1 
+ * Use anothe client by using other console with : java Client User2
+ */
 public class Client {
 
 	private static final int PORT = 8888;

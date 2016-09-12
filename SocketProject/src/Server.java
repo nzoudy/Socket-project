@@ -4,6 +4,13 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Create 13/09/2016
+ * @author urbain
+ * 
+ * by command line, execute : java Server User1 
+ *
+ */
 public class Server {
 
 	private static final int PORT = 8888;
@@ -22,12 +29,23 @@ public class Server {
 		}
 	}
 
+	/**
+	 * By extends Thread class, takes advantage to overide run() method
+	 * 
+ 	 * @author urbain
+	 *
+	 */
 	private class ServerThread extends Thread {
 		Socket socket;
 
+		/*
+		 * Constructor
+		 * @param : socket
+		 */
 		public ServerThread(Socket socket) {
 			this.socket = socket;
 		}
+		
 		public void run() {
 			try {
 				String message = null;
@@ -42,5 +60,6 @@ public class Server {
 		}
 
 	}
-
+	
+	// end -------------------------------------------------------------------------------------------------------------
 }
